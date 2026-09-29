@@ -1,0 +1,1 @@
+# isu-dining-notifier

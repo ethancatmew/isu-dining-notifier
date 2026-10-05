@@ -34,11 +34,12 @@ async def init_db():
                 PRIMARY KEY (id)
             );
 
-            CREATE TABLE IF NOT EXISTS dining_hall_foods (
+            CREATE TABLE IF NOT EXISTS menu (
                 dining_hall_id INTEGER,
                 food_id INTEGER,
+                menu_date TEXT,
 
-                PRIMARY KEY (dining_hall_id, food_id),
+                PRIMARY KEY (dining_hall_id, food_id, menu_date),
                 FOREIGN KEY (dining_hall_id) REFERENCES dining_hall(id),
                 FOREIGN KEY (food_id) REFERENCES food(id)
             );
